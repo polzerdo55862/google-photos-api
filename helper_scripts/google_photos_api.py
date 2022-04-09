@@ -8,7 +8,7 @@ from google.auth.transport.requests import Request
 class GooglePhotosApi:
     def __init__(self,
                  api_name = 'photoslibrary',
-                 client_secret_file=os.path.dirname(__file__) + r'/credentials/client_secret.json',
+                 client_secret_file= r'/credentials/client_secret.json',
                  api_version = 'v1',
                  scopes = ['https://www.googleapis.com/auth/photoslibrary']):
         '''
@@ -26,7 +26,7 @@ class GooglePhotosApi:
         self.client_secret_file = client_secret_file
         self.api_version = api_version
         self.scopes = scopes
-        self.cred_pickle_file = f'./GooglePhotosApi/credentials/token_{self.api_name}_{self.api_version}.pickle'
+        self.cred_pickle_file = f'./credentials/token_{self.api_name}_{self.api_version}.pickle'
 
         self.cred = None
 
