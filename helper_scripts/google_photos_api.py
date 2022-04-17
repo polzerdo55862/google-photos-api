@@ -4,11 +4,12 @@ from google_auth_oauthlib.flow import Flow, InstalledAppFlow
 from googleapiclient.discovery import build
 #from googleapiclient.http import MediaFileUpload
 from google.auth.transport.requests import Request
+import requests
 
 class GooglePhotosApi:
     def __init__(self,
                  api_name = 'photoslibrary',
-                 client_secret_file= r'/credentials/client_secret.json',
+                 client_secret_file= r'./credentials/client_secret.json',
                  api_version = 'v1',
                  scopes = ['https://www.googleapis.com/auth/photoslibrary']):
         '''
@@ -30,6 +31,7 @@ class GooglePhotosApi:
 
         self.cred = None
 
+        '''
     def create_service(self):
         # is checking if there is already a pickle file with relevant credentials
         if os.path.exists(self.cred_pickle_file):
@@ -56,3 +58,19 @@ class GooglePhotosApi:
         except Exception as e:
             print(e)
         return None
+ '''
+
+    def create_service(self):
+        if os.path.exists(self.cred_pickle_file):
+            with open(self.cred_pickle_file, 'rb') as token:
+                creds = pickle.load(token)
+        if not creds or not creds.valid:
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            else:
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    credentialsFile, SCOPES)
+                creds = flow.run_local_server()
+            with open(self.cred_pickle_file, 'wb') as token:
+                pickle.dump(creds, token)
+        return creds
