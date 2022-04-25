@@ -14,7 +14,7 @@ or
 3. Enable Google Photos API Service
    1. Go to the [Google API Console](https://console.cloud.google.com/). 
    2. From the menu bar, select a project or create a new project.
-      ![](img/create_a_project_google.png)
+      ![](read_me_img/create_a_project_google.png)
    3. To open the Google API Library, from the Navigation menu, select APIs & Services > Library. 
    4. Search for "Google Photos Library API". Select the correct result and click "enable". If its already enabled, click "manage"
    5. Afterwards it will forward you to the "Photos API/Service details" page (https://console.cloud.google.com/apis/credentials)
@@ -40,7 +40,7 @@ service = google_photos_api.create_service()
 
 6. Calling the API for the first time, 
    1. Google will ask you if you want to grant the App the required permissions you defined with the scope:
-   ![](img/sign_in_google_acc.png)
+   ![](read_me_img/sign_in_google_acc.png)
    2. Since its just a test app at the moment, Google will make you aware of that > Click on "Continue"
    3. Once you granted the app the required permissions, you will see a "token_......pickle" file created in the folder "credentials". This token file will be used for future calls.
 
