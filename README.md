@@ -1,6 +1,15 @@
 # google-photos-api
 Download images from google photos using python
 
+## To-do
+
+1. Get a list of all downloaded images, transform it to a data frame and comapare them using a full outer join --> no better, get a list of all dates with images, just delete the uptodate one, because its not clear if you have downloaded already all images for that day
+2. Download not yet downloaded images to Downloads folder
+
+-- finish the project here, document it, and clone it to add additional personal stuff
+
+
+
 ## Google Photos API
 
 1. Create virtual environment venv 
