@@ -132,3 +132,5 @@ dmypy.json
 
 # credentials
 .credentials/*
+.downloads/*
+.media_items_list
