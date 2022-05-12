@@ -136,3 +136,4 @@ dmypy.json
 .media_items_list
 
 .DS_Store
+**/.DS_Store
