@@ -2,8 +2,6 @@
 
 ![](./read_me_img/header.png)
 
-Image by the author
-
 Using the Google Photos REST API you can download, upload and modify images stored in Google Photos.
 
 Just as a quick refresher, REST is an architectural style for application programming interfaces that allows interaction with RESTful web services. [Red20]
@@ -19,8 +17,6 @@ The following steps describe how to set up a simple project that lets you use Py
 git clone [git@github.com](mailto:git@github.com):polzerdo55862/google-photos-api.git
 
 ![](https://cdn-images-1.medium.com/max/1600/1*Oo4LdylmyGmLhnbTYmVOIQ.png)
-
-Screenshot by the author
 
 The repo contains the following subfolders:
 
@@ -72,8 +68,6 @@ Enable API — Image by the author
 
 ![](https://cdn-images-1.medium.com/max/1600/1*XtiLnHTySDK33W7lwwDXkg.png)
 
-Add users to consent screen — Screenshot by the author
-
 #### 8. Create API/OAuth credentials
 
 -   On the left side at the Google Photos API Service page click on Credentials
@@ -82,8 +76,6 @@ Add users to consent screen — Screenshot by the author
 -   Download the JSON file to the created credentials, rename it to `client_secret.json` and save it in the folder “credentials”
 
 ![](https://cdn-images-1.medium.com/max/1600/1*tFklMQo3ZuXuzqwOu9jo9A.gif)
-
-Create credentials — Image by the author
 
 #### 9. Use the Google Photo Library API for the first time:
 
@@ -98,8 +90,6 @@ The following section shows how to use OAuth Credentials for authentication with
 Google will ask you if you want to grant the App the required permissions defined in the scope:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*qA8l8cjbozigOFmcyx5hcw.png)
-
-Image by the author
 
 Since this is only a test app at the moment, Google will point it out to you. Click “Continue” to proceed. Once you have granted the application the necessary permissions, a `token_...pickle` file is created in the credentials folder. This token file is used for future API requests.
 
