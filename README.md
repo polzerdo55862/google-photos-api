@@ -4,7 +4,7 @@
 
 Using the Google Photos REST API you can download, upload and modify images stored in Google Photos.
 
-Just as a quick refresher, REST is an architectural style for application programming interfaces that allows interaction with RESTful web services. [Red20]
+Just as a quick refresher, REST is an architectural style for application programming interfaces that allows interaction with RESTful web services.
 
 A GET request allows to retrieve database entries, POST requests to create new entries, PUT requests to update an entry and DELETE requests to delete one.
 
